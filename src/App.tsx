@@ -1,3 +1,4 @@
+import { AppBar, Box, Button, IconButton, Toolbar, Typography } from "@mui/material";
 import React from "react";
 import "./App.css";
 import PaymentPage from "./pages/paymentPage";
@@ -5,9 +6,12 @@ import PaymentPage from "./pages/paymentPage";
 function App() {
     return (
         <div className="App">
-            <header className="App-header">
-                <PaymentPage></PaymentPage>
-            </header>
+            <AppBar position="sticky">
+                <Toolbar>
+                    <Typography variant="h6">Дай 🤚 снайперу</Typography>
+                </Toolbar>
+            </AppBar>
+            <PaymentPage></PaymentPage>
         </div>
     );
 }
