@@ -24,4 +24,16 @@ export const paymentMethods = {
         cardNumber: 'tanyapylatgithub@gmail.com',
         owner: 'Tetyana Pylat',
     },
+
+    Crypto: [
+        { name: 'Bitcoin', number: 'bc1qjvwlcl74crkuudkv0vkxtuaduz0ygx5yxn4yxc' },
+
+        {
+            name: 'Ethereum',
+            number: '0x3d96F86F9142D53A02ffB1D2E39d0fa153683897',
+        },
+        { name: 'USDT (ERC20)', number: '0x3d96F86F9142D53A02ffB1D2E39d0fa153683897' },
+        { name: 'USDT (TRC20)', number: 'TJvwgMKsHKNo1LPMkhqaFRE1hiT1kREkzY' },
+        { name: 'Dogecoin', number: 'D87gDHk1uqowhY8rhLXqqfwo9wReVXMMVJ' },
+    ],
 };

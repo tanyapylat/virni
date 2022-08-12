@@ -8,8 +8,9 @@ import monoBankLogo from '../images/monoLogo.jpeg';
 import privatBankLogo from '../images/privatBankLogo.jpg';
 import payPalLogo from '../images/paypal.png';
 import payoneerLogo from '../images/payoneerLogo.png';
-import { Button, Link } from '@mui/material';
+import { Button, Link, Typography } from '@mui/material';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
+import CryptosCard from '../components/CryptosCard';
 
 const StyledBox = styled(Box)`
     padding: 10px;
@@ -34,6 +35,7 @@ const PaymentPage = () => {
     const privatBank = paymentMethods.PrivatBank;
     const payPal = paymentMethods.PayPal;
     const payoneer = paymentMethods.Payoneer;
+    const cryptos = paymentMethods.Crypto;
 
     return (
         <>
@@ -72,6 +74,7 @@ const PaymentPage = () => {
                         logo={payoneerLogo}
                         owner={payoneer.owner}
                     />
+                    <CryptosCard cryptos={cryptos}></CryptosCard>
                 </Stack>
             </StyledBox>
         </>
