@@ -1,7 +1,7 @@
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
-import PaymentCard from '../components/PaymentCard';
+import PaymentCard from '../components/paymentCard';
 import { paymentMethods } from '../paymentMethods';
 import { ReactComponent as MonobankText } from '../images/monobankText.svg';
 import monoBankLogo from '../images/monoLogo.jpeg';
