@@ -1,7 +1,6 @@
-import { AppBar, Box, Button, IconButton, Toolbar, Typography } from "@mui/material";
-import React from "react";
-import "./App.css";
-import PaymentPage from "./pages/paymentPage";
+import { AppBar, Toolbar, Typography } from '@mui/material';
+import './App.css';
+import PaymentPage from './pages/paymentPage';
 
 function App() {
     return (
