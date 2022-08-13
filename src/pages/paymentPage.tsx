@@ -9,6 +9,7 @@ import monoBankLogo from '../images/monoLogo.jpeg';
 import privatBankLogo from '../images/privatBankLogo.jpg';
 import { ReactComponent as PayPalLogo } from '../images/paypal.svg';
 import payoneerLogo from '../images/payoneerLogo.png';
+import millenniumLogo from '../images/millenniumLogo.png';
 import { Button, Link } from '@mui/material';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import CryptosCard from '../components/CryptosCard';
@@ -36,6 +37,7 @@ const PaymentPage = () => {
     const privatBank = paymentMethods.PrivatBank;
     const payPal = paymentMethods.PayPal;
     const payoneer = paymentMethods.Payoneer;
+    const millennium = paymentMethods.Millennium;
     const cryptos = paymentMethods.Crypto;
 
     return (
@@ -77,6 +79,12 @@ const PaymentPage = () => {
                         cardNumber={payoneer.cardNumber}
                         logo={payoneerLogo}
                         owner={payoneer.owner}
+                    />
+                    <PaymentCard
+                        name={millennium.name}
+                        cardNumber={millennium.cardNumber}
+                        logo={millenniumLogo}
+                        owner={millennium.owner}
                     />
                     <CryptosCard cryptos={cryptos}></CryptosCard>
                 </Stack>

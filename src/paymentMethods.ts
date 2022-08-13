@@ -25,6 +25,12 @@ export const paymentMethods = {
         owner: 'Tetyana Pylat',
     },
 
+    Millennium: {
+        name: 'Millennium Bank',
+        cardNumber: '67 1160 2202 0000 0003 6120 1408',
+        owner: 'Diana Zaverach',
+    },
+
     Crypto: [
         { name: 'Bitcoin', number: 'bc1qjvwlcl74crkuudkv0vkxtuaduz0ygx5yxn4yxc' },
 
