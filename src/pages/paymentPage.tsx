@@ -6,7 +6,7 @@ import { paymentMethods } from '../paymentMethods';
 import { ReactComponent as MonobankText } from '../images/monobankText.svg';
 import monoBankLogo from '../images/monoLogo.jpeg';
 import privatBankLogo from '../images/privatBankLogo.jpg';
-import payPalLogo from '../images/paypal.png';
+import { ReactComponent as PayPalLogo } from '../images/paypal.svg';
 import payoneerLogo from '../images/payoneerLogo.png';
 import { Button, Link } from '@mui/material';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
@@ -65,7 +65,7 @@ const PaymentPage = () => {
                     <PaymentCard
                         name={payPal.name}
                         cardNumber={payPal.cardNumber}
-                        logo={payPalLogo}
+                        logo={<PayPalLogo />}
                         owner={payPal.owner}
                     />
                     <PaymentCard

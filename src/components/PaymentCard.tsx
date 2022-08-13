@@ -4,11 +4,11 @@ import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 
-import { Alert, Avatar, Button, CardActionArea, Snackbar, Stack } from '@mui/material';
+import { Alert, Avatar, Box, CardActionArea, Snackbar, Stack } from '@mui/material';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
-import { useState } from 'react';
+import { ReactNode, useState } from 'react';
 
-export type CreditCardProps = { name: string; cardNumber: string; owner?: string; logo: string };
+export type CreditCardProps = { name: string; cardNumber: string; owner?: string; logo: ReactNode };
 
 const StyledCard = styled(Card)`
     background-color: #0082e90f;
@@ -24,8 +24,14 @@ const PaymentCard = ({ name, cardNumber, owner, logo }: CreditCardProps) => {
                     <CardContent>
                         <Stack direction="column" justifyContent="center" alignItems="stretch" spacing={2}>
                             <Stack direction="row" spacing={2} alignItems="flex-end">
-                                <Avatar src={logo} variant="square" sx={{ bgcolor: 'white' }}></Avatar>
-                                <Typography gutterBottom variant="h5" component="div">
+                                {typeof logo === 'string' ? (
+                                    <Avatar src={logo} variant="square" sx={{ bgcolor: 'white' }}></Avatar>
+                                ) : (
+                                    <Avatar variant="square" sx={{ bgcolor: 'transparent' }}>
+                                        {logo}
+                                    </Avatar>
+                                )}
+                                <Typography gutterBottom variant="h5" color="text.secondary" component="div">
                                     {name}
                                 </Typography>
                             </Stack>

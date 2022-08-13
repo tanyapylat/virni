@@ -1,6 +1,6 @@
 import { AppBar, Stack, Typography } from '@mui/material';
 import './App.css';
-import PaymentPage from './pages/PaymentPage';
+import PaymentPage from './pages/paymentPage';
 
 function App() {
     return (
