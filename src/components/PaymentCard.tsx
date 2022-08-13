@@ -4,7 +4,7 @@ import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 
-import { Alert, Avatar, Box, CardActionArea, Snackbar, Stack } from '@mui/material';
+import { Alert, Avatar, CardActionArea, Snackbar, Stack } from '@mui/material';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { ReactNode, useState } from 'react';
 

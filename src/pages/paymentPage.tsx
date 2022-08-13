@@ -4,6 +4,7 @@ import Stack from '@mui/material/Stack';
 import PaymentCard from '../components/PaymentCard';
 import { paymentMethods } from '../paymentMethods';
 import { ReactComponent as MonobankText } from '../images/monobankText.svg';
+import { ReactComponent as MonobankJar } from '../images/jarBadge.svg';
 import monoBankLogo from '../images/monoLogo.jpeg';
 import privatBankLogo from '../images/privatBankLogo.jpg';
 import { ReactComponent as PayPalLogo } from '../images/paypal.svg';
@@ -48,7 +49,10 @@ const PaymentPage = () => {
                         endIcon={<OpenInNewIcon />}
                         href={paymentMethods.MonoBankJar.url}
                         target="_blank">
-                        <MonobankText />
+                        <Stack direction="row" alignItems="center" spacing={2}>
+                            <MonobankJar />
+                            <MonobankText />
+                        </Stack>
                     </MonobankJarElement>
                     <PaymentCard
                         name={privatBank.name}
