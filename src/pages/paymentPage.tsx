@@ -1,5 +1,4 @@
 import { styled } from '@mui/material/styles';
-import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import PaymentCard from '../components/PaymentCard';
 import { paymentMethods } from '../paymentMethods';
@@ -13,8 +12,9 @@ import millenniumLogo from '../images/millenniumLogo.png';
 import { Button, Link } from '@mui/material';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import CryptosCard from '../components/CryptosCard';
+import { LayoutContainer } from '../components/LayoutContainer';
 
-const StyledBox = styled(Box)`
+const Container = styled(LayoutContainer)`
     padding: 10px;
 `;
 
@@ -41,55 +41,53 @@ const PaymentPage = () => {
     const cryptos = paymentMethods.Crypto;
 
     return (
-        <>
-            <StyledBox>
-                <Stack direction="column" justifyContent="center" alignItems="stretch" spacing={2}>
-                    <MonobankJarElement
-                        component={Link}
-                        size="large"
-                        variant="contained"
-                        endIcon={<OpenInNewIcon />}
-                        href={paymentMethods.MonoBankJar.url}
-                        target="_blank">
-                        <Stack direction="row" alignItems="center" spacing={2}>
-                            <MonobankJar />
-                            <MonobankText />
-                        </Stack>
-                    </MonobankJarElement>
-                    <PaymentCard
-                        name={privatBank.name}
-                        cardNumber={privatBank.cardNumber}
-                        logo={privatBankLogo}
-                        owner={privatBank.owner}
-                    />
-                    <PaymentCard
-                        name={monoBank.name}
-                        cardNumber={monoBank.cardNumber}
-                        logo={monoBankLogo}
-                        owner={monoBank.owner}
-                    />
-                    <PaymentCard
-                        name={payPal.name}
-                        cardNumber={payPal.cardNumber}
-                        logo={<PayPalLogo />}
-                        owner={payPal.owner}
-                    />
-                    <PaymentCard
-                        name={payoneer.name}
-                        cardNumber={payoneer.cardNumber}
-                        logo={payoneerLogo}
-                        owner={payoneer.owner}
-                    />
-                    <PaymentCard
-                        name={millennium.name}
-                        cardNumber={millennium.cardNumber}
-                        logo={millenniumLogo}
-                        owner={millennium.owner}
-                    />
-                    <CryptosCard cryptos={cryptos}></CryptosCard>
-                </Stack>
-            </StyledBox>
-        </>
+        <Container>
+            <Stack direction="column" justifyContent="center" alignItems="stretch" spacing={2}>
+                <MonobankJarElement
+                    component={Link}
+                    size="large"
+                    variant="contained"
+                    endIcon={<OpenInNewIcon />}
+                    href={paymentMethods.MonoBankJar.url}
+                    target="_blank">
+                    <Stack direction="row" alignItems="center" spacing={2}>
+                        <MonobankJar />
+                        <MonobankText />
+                    </Stack>
+                </MonobankJarElement>
+                <PaymentCard
+                    name={privatBank.name}
+                    cardNumber={privatBank.cardNumber}
+                    logo={privatBankLogo}
+                    owner={privatBank.owner}
+                />
+                <PaymentCard
+                    name={monoBank.name}
+                    cardNumber={monoBank.cardNumber}
+                    logo={monoBankLogo}
+                    owner={monoBank.owner}
+                />
+                <PaymentCard
+                    name={payPal.name}
+                    cardNumber={payPal.cardNumber}
+                    logo={<PayPalLogo />}
+                    owner={payPal.owner}
+                />
+                <PaymentCard
+                    name={payoneer.name}
+                    cardNumber={payoneer.cardNumber}
+                    logo={payoneerLogo}
+                    owner={payoneer.owner}
+                />
+                <PaymentCard
+                    name={millennium.name}
+                    cardNumber={millennium.cardNumber}
+                    logo={millenniumLogo}
+                    owner={millennium.owner}
+                />
+                <CryptosCard cryptos={cryptos}></CryptosCard>
+            </Stack>
+        </Container>
     );
 };
 

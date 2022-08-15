@@ -6,7 +6,7 @@ import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 
 import { Alert, CardActionArea, Snackbar, Stack } from '@mui/material';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
-import { useState } from 'react';
+import { Fragment, useState } from 'react';
 
 export type CryptosCardProps = { cryptos: { name: string; number: string }[] };
 
@@ -39,7 +39,7 @@ const CryptosCard = ({ cryptos }: CryptosCardProps) => {
                 const name = crypto.name;
 
                 return (
-                    <>
+                    <Fragment key={name}>
                         <CopyToClipboard text={number} onCopy={() => setCopied(true)}>
                             <CardActionArea>
                                 <CardContent>
@@ -63,7 +63,7 @@ const CryptosCard = ({ cryptos }: CryptosCardProps) => {
                                 Скопійовано...
                             </Alert>
                         </Snackbar>
-                    </>
+                    </Fragment>
                 );
             })}
 
