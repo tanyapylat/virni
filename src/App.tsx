@@ -1,18 +1,27 @@
-import { AppBar, Stack, Typography } from '@mui/material';
+import { AppBar, Stack, styled, Typography } from '@mui/material';
 import './App.css';
+import { LayoutContainer } from './components/LayoutContainer';
 import PaymentPage from './pages/paymentPage';
+
+const AppBarContent = styled(Stack)`
+    padding: ${(props) => props.theme.spacing(2)};
+    ${(props) => props.theme.breakpoints.up('md')} {
+        flex-direction: row;
+        column-gap: ${(props) => props.theme.spacing(0.5)};
+    }
+`;
 
 function App() {
     return (
         <div className="App">
-            <AppBar position="sticky">
-                <Stack direction="column" alignItems="stretch" style={{ padding: '16px' }}>
-                    <Typography>Підтримуєш хлопців з передової - </Typography>
-                    <Typography align="right">живеш у безпеці в тилу</Typography>
-                </Stack>
-
-                {/* <Toolbar></Toolbar> */}
-            </AppBar>
+            <LayoutContainer>
+                <AppBar position="sticky">
+                    <AppBarContent direction="column" alignItems="stretch">
+                        <Typography>Підтримуєш хлопців з передової -</Typography>
+                        <Typography align="right">живеш у безпеці в тилу</Typography>
+                    </AppBarContent>
+                </AppBar>
+            </LayoutContainer>
             <PaymentPage></PaymentPage>
         </div>
     );

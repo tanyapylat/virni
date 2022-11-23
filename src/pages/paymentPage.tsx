@@ -1,5 +1,4 @@
 import { styled } from '@mui/material/styles';
-import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import PaymentCard from '../components/PaymentCard';
 import { paymentMethods } from '../paymentMethods';
@@ -13,8 +12,9 @@ import millenniumLogo from '../images/millenniumLogo.png';
 import { Button, Link } from '@mui/material';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import CryptosCard from '../components/CryptosCard';
+import { LayoutContainer } from '../components/LayoutContainer';
 
-const StyledBox = styled(Box)`
+const StyledBox = styled(LayoutContainer)`
     padding: 10px;
 `;
 
