@@ -69,6 +69,12 @@ const PaymentPage = () => {
                         owner={monoBank.owner}
                     />
                     <PaymentCard
+                        name={millennium.name}
+                        cardNumber={millennium.cardNumber}
+                        logo={millenniumLogo}
+                        owner={millennium.owner}
+                    />
+                    <PaymentCard
                         name={payPal.name}
                         cardNumber={payPal.cardNumber}
                         logo={<PayPalLogo />}
@@ -80,12 +86,7 @@ const PaymentPage = () => {
                         logo={payoneerLogo}
                         owner={payoneer.owner}
                     />
-                    <PaymentCard
-                        name={millennium.name}
-                        cardNumber={millennium.cardNumber}
-                        logo={millenniumLogo}
-                        owner={millennium.owner}
-                    />
+
                     <CryptosCard cryptos={cryptos}></CryptosCard>
                 </Stack>
             </StyledBox>
