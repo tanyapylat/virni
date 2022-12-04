@@ -56,24 +56,21 @@ const PaymentPage = () => {
                             <MonobankText />
                         </Stack>
                     </MonobankJarElement>
-                    <PaymentCard
-                        name={privatBank.name}
-                        cardNumber={privatBank.cardNumber}
-                        logo={privatBankLogo}
-                        owner={privatBank.owner}
-                    />
+
                     <PaymentCard
                         name={monoBank.name}
                         cardNumber={monoBank.cardNumber}
                         logo={monoBankLogo}
                         owner={monoBank.owner}
                     />
+
                     <PaymentCard
-                        name={millennium.name}
-                        cardNumber={millennium.cardNumber}
-                        logo={millenniumLogo}
-                        owner={millennium.owner}
+                        name={privatBank.name}
+                        cardNumber={privatBank.cardNumber}
+                        logo={privatBankLogo}
+                        owner={privatBank.owner}
                     />
+
                     <PaymentCard
                         name={payPal.name}
                         cardNumber={payPal.cardNumber}
@@ -85,6 +82,13 @@ const PaymentPage = () => {
                         cardNumber={payoneer.cardNumber}
                         logo={payoneerLogo}
                         owner={payoneer.owner}
+                    />
+
+                    <PaymentCard
+                        name={millennium.name}
+                        cardNumber={millennium.cardNumber}
+                        logo={millenniumLogo}
+                        owner={millennium.owner}
                     />
 
                     <CryptosCard cryptos={cryptos}></CryptosCard>
