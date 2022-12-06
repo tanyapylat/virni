@@ -1,11 +1,11 @@
 export const paymentMethods = {
     MonoBank: {
         name: 'Monobank',
-        cardNumber: '5375 4112 0463 5739',
+        cardNumber: '5375 4112 0460 3703',
         owner: 'Tetyana Pylat',
     },
     MonoBankJar: {
-        url: 'https://send.monobank.ua/jar/8fzEAg6ffs',
+        url: 'https://send.monobank.ua/jar/3nhvZ5j3Lf',
     },
     PrivatBank: {
         name: 'PrivatBank',
