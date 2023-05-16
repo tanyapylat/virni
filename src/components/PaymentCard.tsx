@@ -11,7 +11,7 @@ import { ReactNode, useState } from 'react';
 export type CreditCardProps = { name: string; cardNumber: string; owner?: string; logo: ReactNode };
 
 const StyledCard = styled(Card)`
-    background-color: #0082e90f;
+    background-color: #3a886030;
 `;
 
 const PaymentCard = ({ name, cardNumber, owner, logo }: CreditCardProps) => {

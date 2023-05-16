@@ -11,7 +11,7 @@ import { Fragment, useState } from 'react';
 export type CryptosCardProps = { cryptos: { name: string; number: string }[] };
 
 const StyledCard = styled(Card)`
-    background-color: #0082e90f;
+    background-color: #3a886030;
 `;
 
 const StyledTypographyForNumber = styled(Typography)`

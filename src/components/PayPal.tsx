@@ -1,15 +1,15 @@
-import { styled } from "@mui/material/styles";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import Typography from "@mui/material/Typography";
-import ContentCopyIcon from "@mui/icons-material/ContentCopy";
+import { styled } from '@mui/material/styles';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import Typography from '@mui/material/Typography';
+import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 
-import { CardActionArea, CardActions, Stack } from "@mui/material";
+import { CardActionArea, CardActions, Stack } from '@mui/material';
 
 export type CreditCardProps = {};
 
 const StyledCard = styled(Card)`
-    background-color: #0082e90f;
+    background-color: #3a886030;
 `;
 
 const PayPal = ({}: CreditCardProps) => {

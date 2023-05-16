@@ -1,7 +1,7 @@
-import { AppBar, Stack, styled, Typography } from '@mui/material';
-import './App.css';
+import { AppBar, Stack, styled, ThemeProvider, Typography } from '@mui/material';
 import { LayoutContainer } from './components/LayoutContainer';
 import PaymentPage from './pages/paymentPage';
+import theme from './muiTheme';
 
 const AppBarContent = styled(Stack)`
     padding: ${(props) => props.theme.spacing(2)};
@@ -13,7 +13,7 @@ const AppBarContent = styled(Stack)`
 
 function App() {
     return (
-        <div className="App">
+        <ThemeProvider theme={theme}>
             <LayoutContainer>
                 <AppBar position="sticky">
                     <AppBarContent direction="column" alignItems="stretch">
@@ -23,7 +23,7 @@ function App() {
                 </AppBar>
             </LayoutContainer>
             <PaymentPage></PaymentPage>
-        </div>
+        </ThemeProvider>
     );
 }
 
